@@ -1,0 +1,36 @@
+﻿@model PaytmTest.Models.RequestData
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div align="center">
+        @using (Html.BeginForm("CreatePayment", "Home", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td>Mobile Number  :</td>
+                    <td><input type="text" name="mobileNumber" value="" /></td>
+                </tr>
+                <tr>
+                    <td>Email  :</td>
+                    <td><input type="text" name="email" value="" /></td>
+                </tr>
+                <tr>
+                    <td>Amount  :</td>
+                    <td><input type="text" name="amount" value="" /></td>
+                </tr>
+            </table>
+            <pre><input type="submit" value="Save" /> </pre>
+        }
+    </div>
+</body>
+</html>
